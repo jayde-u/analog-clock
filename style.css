@@ -88,25 +88,27 @@ html, body {
 .hand.hour {
     width: 0.5em;
     height: 9em;
+    transform: rotate(var(--rotation-hour));
 }
 
 .hand.minute {
     width: 0.3em;
     height: 12em;
-    transform: rotate(30deg);
+    transform: rotate(var(--rotation-min));
 }
 
 .hand.second {
     width: 0.1em;
     height: 15em;
     background-color: rgb(255, 16, 52);
-    transform:  rotate(60deg);
+    transform: rotate(var(--rotation-sec));
 }
 
 .hand.second.tail {
     height: 1.5em;
-    transform:  rotate(240deg);
+    transform: rotate(calc(var(--rotation-sec) + 180deg));
 }
+
 
 footer {
     font-family: "Roboto Mono", monospace;
